@@ -1,0 +1,30 @@
+{
+    "algo": "cryptonight-webchain",
+    "background": false,
+    "colors": true,
+    "donate-level": 3,
+    "log-file": null,
+    "print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "threads": [
+        {
+            "index": 0,        // This is your GPU number. 0 is the first GPU so if you had 6 GPUs your last index would be 5
+            "threads": 24,     //  Modify threads, blocks, bfactor, bsleep to optimize your GPU
+            "blocks": 16,
+            "bfactor": 6,
+            "bsleep": 25,
+            "affine_to_cpu": false
+        }
+    ],
+    "pools": [
+        {
+            "url": "webcn.loudmining.com:4444",           // Mining pool URL and port
+            "user": "0xd73051a93ebc69b885f645fb80e5336aa03ade49",      //   Your wallet address here
+            "pass": "LOUD-Nvidia",              // your worker ID goes here no spaces
+            "keepalive": false,
+            "nicehash": false,
+            "variant": 1
+        }
+    ],
+}
